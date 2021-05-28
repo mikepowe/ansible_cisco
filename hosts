@@ -1,0 +1,11 @@
+[routers]
+
+ios-xe-mgmt.cisco.com
+
+[routers:vars]
+ansible_user=developer
+ansible_password=C1sco12345
+ansible_connection=network_cli
+ansible_network_os=cisco.ios.ios
+ansible_port=8181
+ansible_python_interpreter=/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9

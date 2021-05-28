@@ -1,0 +1,12 @@
+#
+# This is a template for basic YAML file structure
+
+# 3 dashes identifies a YAML file. This is a requirement
+---
+
+# many default variables can be set in the /hosts file or in the ansible.cfg file
+# but you can also define variables here in the YAML file 
+
+- name: YAML template
+  hosts: # can be defined here or in hosts file if not provided
+  connection: network_cli # This will be the most common for network engineers. Ansible uses Paramiko for SSH

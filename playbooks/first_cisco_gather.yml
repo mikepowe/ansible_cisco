@@ -1,0 +1,27 @@
+##############################################################
+# Learning Series: Network Programmability Basics
+# Module: NetDevOps
+# Lesson: Ansible Part 1: What you need to Get Started
+# Author: Hank Preston <hapresto@cisco.com>
+# 
+# example1.yaml
+# Illustrate the following concepts:
+# - Basic Playbook Structure
+# - Use of Variables
+##############################################################
+---
+- name: Troubleshooting
+  connection: network_cli
+  port: 8181
+  gather_facts: true
+  hosts: routers
+
+  tasks:
+    - name: "Gather all legacy facts"
+      cisco.ios.ios_facts:
+        gather_subset: min
+        gather_network_resources: l3_interfaces
+      register: facts_out
+        
+    - name: "Facts Found"
+      debug: msg="{{facts_out}}"
